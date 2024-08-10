@@ -10,6 +10,7 @@ public class ArrayPair{
             System.out.println();
         }
     }
+    //to print sub array
     public static void subArray(int num[]){
         for(int i=0;i<num.length;i++){
             int start=i;
