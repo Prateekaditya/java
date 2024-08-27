@@ -7,7 +7,7 @@ public class Max {
         arr.add(121);
         arr.add(25);
         arr.add(9);
-        arr.add(6);
+        // arr.add(6);
         int max = Integer.MIN_VALUE;
         for (int i = 0; i < arr.size(); i++) {
             max = Math.max(max, arr.get(i));
