@@ -15,7 +15,7 @@ public class Multi {
         mainList.add(list2);
         mainList.add(list3);
 
-        // System.out.println(mainList);
+        System.out.println(mainList);
         for (int i = 0; i < mainList.size(); i++) {
             ArrayList<Integer> currentList = mainList.get(i);
             for (int j = 0; j < currentList.size(); j++) {
