@@ -11,16 +11,57 @@ public class MergeSort {
 
     public static Node head;
     public static Node tail;
+    public static int size;
 
+    public void addFirst(int data) {
+
+        // Step1 Create A newNode
+        Node newnode = new Node(data);
+        size++;
+        if (head == null) {
+            head = tail = newnode;
+            return;
+        }
+        // step-2 newnode next = head
+        newnode.next = head; // link
+
+        // step-3 head=newnode
+        head = newnode;
+    }
+
+    public void printLL() {
+        Node temp = head;
+        if (head == null) {
+            System.out.println("LL is Empty");
+            return;
+        }
+        while (temp != null) {
+            System.out.print(temp.data + "->");
+            temp = temp.next;
+        }
+        System.out.println("null");
+    }
+
+    // private Node getMid(Node head) {
+    //     Node slow = head;
+    //     Node fast = head;
+    //     while (fast != null && fast.next != null) {
+    //         slow = slow.next;
+    //         fast = fast.next.next;
+    //     }
+    //     return slow;
+    // }
     private Node getMid(Node head) {
         Node slow = head;
-        Node fast = head;
+        Node fast = head.next; // Start `fast` one step ahead
+    
         while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
-        return slow;
+        return slow; // Slow now points to the midpoint of the list
     }
+    
 
     private Node merge(Node head1, Node head2) {
         Node mergeLL = new Node(-1);
@@ -51,7 +92,7 @@ public class MergeSort {
     }
 
     public Node mergeSort(Node head) {
-        if (head == null && head.next != null) {
+        if (head == null || head.next == null) {
             return head;
         }
         Node mid = getMid(head);
@@ -63,6 +104,13 @@ public class MergeSort {
     }
 
     public static void main(String[] args) {
-
+        MergeSort l1 = new MergeSort();
+        l1.addFirst(1);
+        l1.addFirst(2);
+        l1.addFirst(3);
+        l1.addFirst(4);
+        l1.printLL();
+        l1.head = l1.mergeSort(l1.head);
+        l1.printLL();
     }
 }
