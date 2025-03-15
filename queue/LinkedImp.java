@@ -7,7 +7,7 @@ public class LinkedImp {
             this.data=data;
             this.next=null;
         }
-
+     
     }
     static class Queue{
         static Node head=null;

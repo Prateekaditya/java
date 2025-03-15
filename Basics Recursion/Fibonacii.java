@@ -8,7 +8,7 @@ public class Fibonacii {
             n= 0;
             return;
         }
-         store=printFibonacci (n - 1)
+        int store=printFibonacci (n - 1)
        value= n + store ;
         System.out.println(value);
         
