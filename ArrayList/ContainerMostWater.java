@@ -23,7 +23,7 @@ public class ContainerMostWater {
             int currWater = ht * wt;
             maxWater = Math.max(currWater, maxWater);
 
-            if (lp < rp) {
+            if (height.get(lp) <height.get(rp) ) {
                 lp++;
             } else {
                 rp--;
