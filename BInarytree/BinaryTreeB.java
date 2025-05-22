@@ -15,7 +15,7 @@ public class BinaryTreeB {
     } 
     static  class BinaryTree{    // Creation of a binary tree
         static int idx=-1;
-        public static Node buildTree(int nodes[]){
+        public static Node buildTree(int des[]){
             idx++;
             if(nodes[idx]==-1){
                 return null;
