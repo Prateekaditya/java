@@ -5,7 +5,6 @@ public class Calsum {
         if (n == 1) {
             return 1;
         }
-        int store = sum(n - 1);
         int value = n + sum(n - 1);
         return value;
     }
