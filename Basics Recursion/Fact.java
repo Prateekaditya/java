@@ -5,9 +5,9 @@ public class Fact {
         if (n == 0) {
             return 1;
         }
-        int fm = factorial(n - 1);
-        int f = n * fm;
-        return f;
+        // int fm = factorial(n - 1);
+        // int f = n * fm;
+        return n*factorial(n-1);
     }
 
     public static void main(String[] args) {
